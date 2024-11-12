@@ -61,7 +61,10 @@ const FlyerProduct = () => {
           <div className="w-full p-5">
             {materi.map((res, i) => {
               return (
-                <div className="mb-10 flex items-center justify-between">
+                <div
+                  key={i}
+                  className="mb-10 flex items-center justify-between"
+                >
                   <div>
                     <p className="text-xs text-gray-400 ">
                       {res.type} <FontAwesomeIcon icon={faCircle} width={5} />{" "}

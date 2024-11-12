@@ -11,20 +11,6 @@ import { configdata } from "@/config/global";
 
 const FlyerHero = () => {
   const param = useParams();
-  const [data, setData] = useState({});
-
-  const getData = () => {
-    axios
-      .get(`api/flyer-lists?filters[name][$eq]=${param.type}`)
-      .then((res) => {
-        setData(res.data.data[0]);
-      })
-      .catch((err) => {});
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
 
   return (
     <div className="w-full bg-white">
