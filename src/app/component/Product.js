@@ -3,10 +3,6 @@ import {
   faAnglesRight,
   faCaretRight,
   faCircle,
-  faCircleDot,
-  faDotCircle,
-  faListDots,
-  faRadio,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
