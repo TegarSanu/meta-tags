@@ -124,7 +124,7 @@ const FlyerNavbar = ({ newTab }) => {
       </div>
       <div
         className={`flex w-full py-4 md:hidden justify-center items-center top-0 left-0 z-50 fixed ${
-          scrollPosition > 70 ? "shadow-lg bg-opacity-100 bg-cyan-500" : ""
+          scrollPosition > 70 ? "shadow-lg bg-white" : ""
         }`}
       >
         <motion.div
@@ -134,12 +134,13 @@ const FlyerNavbar = ({ newTab }) => {
           className={`container max-w-6xl text-gray-600 flex justify-between text-sm transition-all duration-500 px-7 sm:px-7 md:px-0`}
         >
           <div className="flex items-center">
-            <img alt="" src={logo.src} className="w-28" />
+            <Image alt="" src={configdata.logo} className="w-28" />
           </div>
           <div className="flex items-center gap-4">
             <Button
+              style={{ color: configdata.color1 }}
               isIconOnly
-              className="border bg-transparent text-white"
+              className="border bg-transparent"
               onClick={() => setOpen(!open)}
             >
               <FontAwesomeIcon icon={faBars} />
@@ -156,8 +157,9 @@ const FlyerNavbar = ({ newTab }) => {
         }`}
       >
         <div className="w-full px-7 py-4 flex justify-between relative z-50 shadow items-center">
-          <img alt="" src={logo2.src} className="w-28" />
+          <Image alt="" src={configdata.logo} className="w-28" />
           <Button
+            style={{ color: configdata.color1 }}
             isIconOnly
             className="border bg-transparent text-white"
             onClick={() => setOpen(!open)}
@@ -174,22 +176,22 @@ const FlyerNavbar = ({ newTab }) => {
                   handleMenu(res.path);
                   setOpen(false);
                 }}
-                className={`py-1 hover:text-blue-500 ${
-                  activeSection === res.path
-                    ? "border-b-2 border-blue-500 text-blue-500"
-                    : "text-gray-400"
-                }`}
+                style={{
+                  color:
+                    activeSection === res.path ? configdata.color1 : "#d1d5db",
+                }}
+                className={`py-1 hover:text-blue-500 `}
               >
                 {res.title}
               </p>
             );
           })}
-          <Button
-            className="bg-blue-500 text-white rounded-md"
-            onClick={() => window.open(`https://wa.me/+6289526643223`)}
+          <button
+            style={{ backgroundColor: configdata.color1 }}
+            className="text-xs rounded-full px-5 py-2 text-white"
           >
-            Hubungi Kami
-          </Button>
+            Sign Up <FontAwesomeIcon icon={faSignIn} />
+          </button>
         </div>
       </div>
     </>

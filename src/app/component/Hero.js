@@ -14,48 +14,56 @@ const FlyerHero = () => {
 
   return (
     <div className="w-full bg-white">
-      <div className="w-full bg-gradient-to-t from-gray-50 to-white flex items-center pt-52 flex-col gap-5">
-        <p className="text-5xl text-center text-black font-bold">
-          Saatnya GoDigital bersama PSP, <br /> Jadikan sekolah lebih maju{" "}
-          <br /> dengan teknologi
+      <div className="w-full bg-gradient-to-t from-gray-50 to-white flex items-center pt-52 flex-col gap-5 px-7 md:px-0">
+        <p className="text-2xl md:text-5xl text-center text-black font-bold">
+          Saatnya GoDigital bersama {configdata.companyName}, <br /> Jadikan
+          sekolah lebih maju <br /> dengan teknologi
         </p>
-        <p className="text-gray-500 text-center">
+        <p className="text-gray-500 text-center md:text-medium text-xs">
           Selamatkan Waktu, Hemat Energi, Tingkatkan Efisiensi,
           <br />
           Teknologi Inovatif untuk Operasional Sekolah yang lebih mudah
         </p>
-        <div className="w-full pt-16 flex items-center justify-center gap-5">
+        <div className="w-full pt-5 md:pt-16 flex items-center justify-center gap-5">
           <div className="bg-black rounded-xl py-2 px-4 border-white border-1 text-white flex items-center gap-3">
             <FontAwesomeIcon icon={faCircle} />
             <div>
-              <p className="text-xs">Download on the</p>
-              <p className="text-xl font-bold">Apps Store</p>
+              <p className="text-[10px] md:text-xs">Download on the</p>
+              <p className="text-sm md:text-xl font-bold">Apps Store</p>
             </div>
           </div>
           <div className="bg-black rounded-xl py-2 px-4 border-white border-1 text-white flex items-center gap-3">
             <FontAwesomeIcon icon={faCircle} />
             <div>
-              <p className="text-xs">GET IT ON</p>
-              <p className="text-xl font-bold">Google Play</p>
+              <p className="text-[10px] md:text-xs">GET IT ON</p>
+              <p className="text-sm md:text-xl font-bold">Google Play</p>
             </div>
           </div>
         </div>
-        <div className="w-full p-0 flex items-center justify-center pt-20">
+        <div className="w-full p-0 flex items-center justify-center pt-0 md:pt-20 -mt-52 -mb-52 md:-mt-0 md:-mb-0 relative">
           {HeroImage()}
-        </div>
-        <div className="w-full flex items-center justify-center gap-[83px]">
-          <div
-            style={{ backgroundColor: configdata.color1 }}
-            className="w-[290px] rounded-t-[30.59px] h-[320px] -mt-[360px]"
-          ></div>
-          <div
-            style={{ backgroundColor: configdata.color1 }}
-            className="w-[290px] rounded-t-[30.59px] h-[440px] -mt-[480px]"
-          ></div>
-          <div
-            style={{ backgroundColor: configdata.color1 }}
-            className="w-[290px] rounded-t-[30.59px] h-[390px] -mt-[430px]"
-          ></div>
+          <div className="w-full md:flex justify-center items-baseline gap-[83px] max-w-6xl absolute bottom-0 hidden">
+            <div className="bg-black w-[35vw] rounded-t-[30.59px] h-[260px] px-4 pt-4">
+              <div className="w-full h-full bg-red-200 rounded-t-3xl"></div>
+            </div>
+            <div className="bg-black w-[35vw] rounded-t-[30.59px] h-[400px] px-4 pt-4">
+              <div className="w-full h-full bg-red-200 rounded-t-3xl"></div>
+            </div>
+            <div className="bg-black w-[35vw] rounded-t-[30.59px] h-[350px] px-4 pt-4">
+              <div className="w-full h-full bg-red-200 rounded-t-3xl"></div>
+            </div>
+          </div>
+          <div className="w-full flex justify-center items-baseline gap-[30px] max-w-6xl absolute bottom-52 md:hidden">
+            <div className="bg-black w-[35vw] rounded-t-xl h-[80px] px-2 pt-2">
+              <div className="w-full h-full bg-red-200 rounded-t-lg"></div>
+            </div>
+            <div className="bg-black w-[35vw] rounded-t-xl h-[150px] px-2 pt-2">
+              <div className="w-full h-full bg-red-200 rounded-t-lg"></div>
+            </div>
+            <div className="bg-black w-[35vw] rounded-t-xl h-[130px] px-2 pt-2">
+              <div className="w-full h-full bg-red-200 rounded-t-lg"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
