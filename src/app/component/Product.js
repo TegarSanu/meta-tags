@@ -40,8 +40,13 @@ const FlyerProduct = () => {
             Materi BNI Smart
           </p>
           <button
+            onClick={() => {
+              window.open(
+                "https://api.katalis.info/main_a/general/psp_mobile?username=bni@smartschool.com&password=bni123"
+              );
+            }}
             style={{ backgroundColor: configdata.color1 }}
-            className="px-5 py-2 rounded-full text-white flex items-center gap-3 text-sm mt-5"
+            className="px-5 py-2 rounded-full text-white flex items-center gap-3 text-sm mt-5 cursor-pointer"
           >
             Demo Apps <FontAwesomeIcon icon={faAngleRight} />
           </button>
@@ -109,10 +114,16 @@ const FlyerProduct = () => {
         <div className="relative">
           <div className="w-full flex items-baseline justify-center gap-[-10px] h-[300px] md:h-[450px]">
             <div className="bg-black md:w-[256px] w-[156px] rounded-t-[30px] md:h-[300px] h-[150px] top-[185px] rotate-[-9.4deg] mt-20 md:px-4 px-2 md:pt-4 pt-2 z-10">
-              <div className="w-full h-full rounded-t-3xl bg-red-200"></div>
+              <div
+                style={{ backgroundImage: `url(${configdata.image2.src})` }}
+                className="w-full h-full rounded-t-3xl bg-cover"
+              ></div>
             </div>
             <div className="bg-black md:w-[270px] w-[156px] rounded-t-[30px] md:h-[420px] h-[250px] top-[44px] rotate-[6.8deg] mt-20 md:px-4 px-2 md:pt-4 pt-2 z-30">
-              <div className="w-full h-full rounded-t-3xl bg-red-200"></div>
+              <div
+                style={{ backgroundImage: `url(${configdata.image1.src})` }}
+                className="w-full h-full rounded-t-3xl bg-cover"
+              ></div>
             </div>
           </div>
         </div>

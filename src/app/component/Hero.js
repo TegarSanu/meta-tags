@@ -44,24 +44,42 @@ const FlyerHero = () => {
           {HeroImage()}
           <div className="w-full md:flex justify-center items-baseline gap-[83px] max-w-6xl absolute bottom-0 hidden">
             <div className="bg-black w-[35vw] rounded-t-[30.59px] h-[260px] px-4 pt-4">
-              <div className="w-full h-full bg-red-200 rounded-t-3xl"></div>
+              <div
+                style={{ backgroundImage: `url(${configdata.image1.src})` }}
+                className="w-full h-full rounded-t-3xl bg-cover"
+              ></div>
             </div>
             <div className="bg-black w-[35vw] rounded-t-[30.59px] h-[400px] px-4 pt-4">
-              <div className="w-full h-full bg-red-200 rounded-t-3xl"></div>
+              <div
+                style={{ backgroundImage: `url(${configdata.image2.src})` }}
+                className="w-full h-full rounded-t-3xl bg-cover"
+              ></div>
             </div>
             <div className="bg-black w-[35vw] rounded-t-[30.59px] h-[350px] px-4 pt-4">
-              <div className="w-full h-full bg-red-200 rounded-t-3xl"></div>
+              <div
+                style={{ backgroundImage: `url(${configdata.image3.src})` }}
+                className="w-full h-full rounded-t-3xl bg-cover"
+              ></div>
             </div>
           </div>
-          <div className="w-full flex justify-center items-baseline gap-[30px] max-w-6xl absolute bottom-52 md:hidden">
-            <div className="bg-black w-[35vw] rounded-t-xl h-[80px] px-2 pt-2">
-              <div className="w-full h-full bg-red-200 rounded-t-lg"></div>
+          <div className="w-full flex justify-center items-baseline gap-[20px] max-w-6xl absolute bottom-52 md:hidden">
+            <div className="bg-black w-[35vw] rounded-t-2xl h-[80px] px-1.5 pt-1.5">
+              <div
+                style={{ backgroundImage: `url(${configdata.image1.src})` }}
+                className="w-full h-full rounded-t-xl bg-cover"
+              ></div>
             </div>
-            <div className="bg-black w-[35vw] rounded-t-xl h-[150px] px-2 pt-2">
-              <div className="w-full h-full bg-red-200 rounded-t-lg"></div>
+            <div className="bg-black w-[35vw] rounded-t-2xl h-[150px] px-1.5 pt-1.5">
+              <div
+                style={{ backgroundImage: `url(${configdata.image2.src})` }}
+                className="w-full h-full rounded-t-xl bg-cover"
+              ></div>
             </div>
-            <div className="bg-black w-[35vw] rounded-t-xl h-[130px] px-2 pt-2">
-              <div className="w-full h-full bg-red-200 rounded-t-lg"></div>
+            <div className="bg-black w-[35vw] rounded-t-2xl h-[130px] px-1.5 pt-1.5">
+              <div
+                style={{ backgroundImage: `url(${configdata.image3.src})` }}
+                className="w-full h-full rounded-t-xl bg-cover"
+              ></div>
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { configdata } from "@/config/global";
 import {
   faAnglesRight,
   faCaretRight,
@@ -14,7 +15,7 @@ const FlyerManfaat = () => {
       <div className="text-center mt-10">
         <p className="text-2xl md:text-5xl text-black font-bold">
           <span className="font-light">Manfaat Menggunakan</span> <br />{" "}
-          Platform Sekolah Pintar
+          {configdata.companyName}
         </p>
         <p className="text-gray-500 mt-4 text-xs md:text-base">
           Bersiaplah untuk transisi yang mulus menuju masa depan <br />{" "}
@@ -22,23 +23,26 @@ const FlyerManfaat = () => {
         </p>
       </div>
       <div className="w-full flex gap-5 mt-10 md:flex-row flex-col">
-        <div className="w-full md:w-[40%] bg-black rounded-xl text-white p-5">
+        <div className="w-full md:w-[45%] bg-black rounded-xl text-white p-5">
           <div className="flex items-center gap-3">
             <FontAwesomeIcon icon={faPaperclip} />
             <p className="text-xs md:text-base">
               Transparansi, Kontrol, dan Kepercayaan orang tua
             </p>
           </div>
-          <Image alt="" />
+          <div className="w-full rounded-2xl bg-gray-300 h-36 mt-5"></div>
         </div>
-        <div className="w-full md:w-[60%] bg-black rounded-xl text-white p-5">
+        <div className="w-full md:w-[55%] bg-black rounded-xl text-white p-5">
           <div className="flex items-center gap-3">
             <FontAwesomeIcon icon={faStar} />
             <p className="text-xs md:text-base">
               Transakasi dan data absensi otomatis
             </p>
           </div>
-          <Image alt="" />
+          <div className="flex gap-5 mt-5">
+            <div className="w-full rounded-2xl bg-gray-300 h-36"></div>
+            <div className="w-full rounded-2xl bg-gray-300 h-36"></div>
+          </div>
         </div>
       </div>
       <div className="w-full mt-5">
@@ -49,7 +53,11 @@ const FlyerManfaat = () => {
               Transparansi, Kontrol, dan Kepercayaan orang tua
             </p>
           </div>
-          <Image alt="" />
+          <div className="flex gap-5 mt-5">
+            <div className="w-full rounded-2xl bg-gray-300 h-36"></div>
+            <div className="w-full rounded-2xl bg-gray-300 h-36"></div>
+            <div className="w-full rounded-2xl bg-gray-300 h-36"></div>
+          </div>
         </div>
       </div>
     </div>
