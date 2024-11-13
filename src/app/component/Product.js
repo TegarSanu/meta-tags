@@ -10,30 +10,42 @@ import { ProductCard, productCard } from "./CustomColorImage";
 
 const materi = [
   {
-    title: "Materi BNI Smart School",
+    title: `${configdata.companyName} School`,
     type: "Materi",
-    name: "BNI Smart School",
+    name: `${configdata.companyName} School`,
+    url: "",
+    materi: "/1-Sekolah Negeri-BNI-2024.pdf",
+    materi2: "/1-Sekolah-BNI-2024.pdf",
   },
   {
-    title: "Materi BNI Smart University",
+    title: `${configdata.companyName} University`,
     type: "Materi",
-    name: "BNI Smart University",
+    name: `${configdata.companyName} University`,
+    url: "https://app.stg.solusinegeri.com/UNTIRTA/autologin/001/1234",
+    materi: "/2-Universitas-BNI-2024.pdf",
   },
   {
-    title: "Materi BNI Smart Company",
+    title: `${configdata.companyName} Company`,
     type: "Materi",
-    name: "BNI Smart Company",
+    name: `${configdata.companyName} Company`,
+    url: "https://app.stg.solusinegeri.com/HKR/autologin/hkrdummy/1234",
+    materi: "/3-Perusahaan-BNI-2024.pdf",
   },
   {
-    title: "Materi BNI General",
+    title: `${configdata.companyName} General Membership`,
     type: "Materi",
-    name: "BNI General",
+    name: `${configdata.companyName} General Membership`,
+    url: "https://app.stg.solusinegeri.com/HSI/autologin/dummyhsi/1234",
+    materi: "/5-Membership-BNI-2024.pdf",
   },
 ];
 
 const FlyerProduct = () => {
   return (
-    <div className="w-full max-w-6xl flex mx-auto flex-col text-black mt-16 z-10 px-7 md:px-0 pt-20 ">
+    <section
+      id="blog"
+      className="w-full max-w-6xl flex mx-auto flex-col text-black mt-16 z-10 px-7 md:px-0 md:pt-20 pt-10"
+    >
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
         <div>
           <p className="text-2xl md:text-5xl text-black font-bold">
@@ -51,8 +63,11 @@ const FlyerProduct = () => {
             Demo Apps <FontAwesomeIcon icon={faAngleRight} />
           </button>
           <div className="w-full relative flex items-center justify-center">
-            <div className="w-52 mt-20">{ProductCard()}</div>
-            <div className="w-72 h-60 bg-white rounded-2xl border -ml-32 p-5"></div>
+            <div className="w-56 mt-24">{ProductCard()}</div>
+            <div
+              style={{ backgroundImage: `url(${configdata.image1.src})` }}
+              className="w-72 h-80 bg-white rounded-2xl -ml-32 p-5 bg-cover"
+            ></div>
           </div>
         </div>
         <div className="w-full flex flex-col gap-5">
@@ -64,26 +79,44 @@ const FlyerProduct = () => {
                   className="mb-10 flex items-center justify-between"
                 >
                   <div className="w-[70%]">
-                    <p className="text-xs text-gray-400 ">
-                      {res.type} <FontAwesomeIcon icon={faCircle} width={5} />{" "}
-                      {res.name}
-                    </p>
+                    <p className="text-xs text-gray-400 ">{res.name}</p>
                     <p className=" text-xl">{res.title}</p>
                     <p
                       style={{ color: configdata.color1 }}
-                      className="mt-5 cursor-pointer text-xs"
+                      className="mt-5 cursor-pointer text-xs transition-all duration-300 hover:opacity-60 flex gap-2 items-center"
+                      onClick={() => window.open(res.materi, "_blank")}
                     >
+                      {res.materi2 && (
+                        <FontAwesomeIcon icon={faCircle} width={5} />
+                      )}{" "}
                       Continue reading <FontAwesomeIcon icon={faAngleRight} />
                     </p>
+                    {res.materi2 && (
+                      <p
+                        style={{ color: configdata.color1 }}
+                        className="mt-1 cursor-pointer text-xs transition-all duration-300 hover:opacity-60 flex gap-2 items-center"
+                        onClick={() => window.open(res.materi2, "_blank")}
+                      >
+                        <FontAwesomeIcon icon={faCircle} width={5} /> Continue
+                        reading <FontAwesomeIcon icon={faAngleRight} />
+                      </p>
+                    )}
                   </div>
-                  <div className="w-20 h-20 bg-gray-300 rounded-xl"></div>
+                  <button
+                    onClick={() => window.open(res.url)}
+                    className="py-2 px-4 md:px-8 rounded-md text-xs md:text-sm text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
+                    style={{ backgroundColor: configdata.color1 }}
+                  >
+                    Try Me
+                  </button>
                 </div>
               );
             })}
           </div>
         </div>
       </div>
-      <div
+      <section
+        id="support"
         style={{ backgroundColor: configdata.color1 }}
         className="w-full rounded-2xl mt-20 nd:mt-40 grid grid-cols-1 md:grid-cols-2 "
       >
@@ -113,26 +146,26 @@ const FlyerProduct = () => {
         </div>
         <div className="relative">
           <div className="w-full flex items-baseline justify-center gap-[-10px] h-[300px] md:h-[450px]">
-            <div className="bg-black md:w-[256px] w-[156px] rounded-t-[30px] md:h-[300px] h-[150px] top-[185px] rotate-[-9.4deg] mt-20 md:px-4 px-2 md:pt-4 pt-2 z-10">
+            <div className="bg-black md:w-[256px] w-[156px] rounded-t-[20px] md:rounded-t-[30px] md:h-[300px] h-[150px] top-[185px] rotate-[-9.4deg] mt-20 md:px-4 px-2 md:pt-4 pt-2 z-10">
               <div
                 style={{ backgroundImage: `url(${configdata.image2.src})` }}
-                className="w-full h-full rounded-t-3xl bg-cover"
+                className="w-full h-full rounded-t-2xl bg-cover"
               ></div>
             </div>
-            <div className="bg-black md:w-[270px] w-[156px] rounded-t-[30px] md:h-[420px] h-[250px] top-[44px] rotate-[6.8deg] mt-20 md:px-4 px-2 md:pt-4 pt-2 z-30">
+            <div className="bg-black md:w-[270px] w-[156px] rounded-t-[20px] md:rounded-t-[30px] md:h-[420px] h-[250px] top-[44px] rotate-[6.8deg] mt-20 md:px-4 px-2 md:pt-4 pt-2 z-30">
               <div
                 style={{ backgroundImage: `url(${configdata.image1.src})` }}
-                className="w-full h-full rounded-t-3xl bg-cover"
+                className="w-full h-full rounded-t-2xl bg-cover"
               ></div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <div
         style={{ backgroundColor: "white" }}
         className="w-full h-20 flex z-50"
       ></div>
-    </div>
+    </section>
   );
 };
 

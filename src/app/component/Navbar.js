@@ -13,25 +13,25 @@ import Image from "next/image";
 const menu = [
   {
     title: "Home",
-    path: "hero",
+    path: "home",
   },
   {
     title: "Feature",
-    path: "benefit",
+    path: "features",
   },
   {
     title: "Blog",
-    path: "product",
+    path: "blog",
   },
   {
     title: "Support",
-    path: "documentation",
+    path: "support",
   },
 ];
 
 const FlyerNavbar = ({ newTab }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [activeSection, setActiveSection] = useState(newTab ? "" : "hero");
+  const [activeSection, setActiveSection] = useState(newTab ? "" : "home");
   const [open, setOpen] = useState(false);
 
   const handleMenu = (section) => {
@@ -99,9 +99,9 @@ const FlyerNavbar = ({ newTab }) => {
                         : "#d1d5db",
                   }}
                   key={i}
-                  // onClick={() =>
-                  //   newTab ? (window.location.href = "/") : handleMenu(res.path)
-                  // }
+                  onClick={() =>
+                    newTab ? (window.location.href = "/") : handleMenu(res.path)
+                  }
                   className={`py-0 hover:text-[${configdata.color1.replace(
                     /^["']|["']$/g,
                     ""
