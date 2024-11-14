@@ -32,7 +32,7 @@ const FlyerHero = () => {
         </p>
         <div className="w-full pt-5 md:pt-16 flex items-center justify-center gap-5">
           <div
-            onClick={() => handleClick(true, "")}
+            onClick={() => handleClick(true, "6rZW4vtAY_0")}
             className="cursor-pointer hover:scale-105 transition-all duration-300 bg-black rounded-xl py-2 px-4 border-white border-1 text-white flex items-center gap-3"
           >
             <FontAwesomeIcon icon={faVideo} />
