@@ -11,7 +11,7 @@ export const api = () => {
 };
 
 export const configdata = {
-  companyName: "BNI Smart",
+  companyName: "Smart School",
   color1: "#f97316",
   color2: "#FFEFE7",
   logo: logo,

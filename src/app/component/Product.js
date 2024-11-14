@@ -10,31 +10,37 @@ import { ProductCard, productCard } from "./CustomColorImage";
 
 const materi = [
   {
-    title: `${configdata.companyName} School`,
+    title: `${configdata.companyName.replaceAll("School", "")} School`,
     type: "Materi",
-    name: `${configdata.companyName} School`,
+    name: `${configdata.companyName.replaceAll("School", "")} School`,
     url: "",
     materi: "/1-Sekolah Negeri-BNI-2024.pdf",
     materi2: "/1-Sekolah-BNI-2024.pdf",
   },
   {
-    title: `${configdata.companyName} University`,
+    title: `${configdata.companyName.replaceAll("School", "")} University`,
     type: "Materi",
-    name: `${configdata.companyName} University`,
+    name: `${configdata.companyName.replaceAll("School", "")} University`,
     url: "https://app.stg.solusinegeri.com/UNTIRTA/autologin/001/1234",
     materi: "/2-Universitas-BNI-2024.pdf",
   },
   {
-    title: `${configdata.companyName} Company`,
+    title: `${configdata.companyName.replaceAll("School", "")} Company`,
     type: "Materi",
-    name: `${configdata.companyName} Company`,
+    name: `${configdata.companyName.replaceAll("School", "")} Company`,
     url: "https://app.stg.solusinegeri.com/HKR/autologin/hkrdummy/1234",
     materi: "/3-Perusahaan-BNI-2024.pdf",
   },
   {
-    title: `${configdata.companyName} General Membership`,
+    title: `${configdata.companyName.replaceAll(
+      "School",
+      ""
+    )} General Membership`,
     type: "Materi",
-    name: `${configdata.companyName} General Membership`,
+    name: `${configdata.companyName.replaceAll(
+      "School",
+      ""
+    )} General Membership`,
     url: "https://app.stg.solusinegeri.com/HSI/autologin/dummyhsi/1234",
     materi: "/5-Membership-BNI-2024.pdf",
   },
@@ -49,7 +55,7 @@ const FlyerProduct = () => {
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
         <div>
           <p className="text-2xl md:text-5xl text-black font-bold">
-            Materi BNI Smart
+            Materi Smart Ecosystem
           </p>
           <button
             onClick={() => {
