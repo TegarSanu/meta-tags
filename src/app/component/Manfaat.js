@@ -31,7 +31,7 @@ const FlyerManfaat = () => {
           <div className="flex items-center gap-3">
             <FontAwesomeIcon icon={faPaperclip} />
             <p className="text-xs md:text-base">
-              Transparansi, Kontrol, dan Kepercayaan orang tua
+              Meningkatkan Transparansi, Kontrol, dan Kepercayaan orang tua
             </p>
           </div>
           <div
@@ -43,7 +43,7 @@ const FlyerManfaat = () => {
           <div className="flex items-center gap-3">
             <FontAwesomeIcon icon={faStar} />
             <p className="text-xs md:text-base">
-              Transakasi dan data absensi otomatis
+              Rekonsiliasi Transakasi dan Data Absensi Otomatis
             </p>
           </div>
           <div className="flex gap-5 mt-5">
@@ -61,7 +61,7 @@ const FlyerManfaat = () => {
           <div className="flex items-center gap-3">
             <FontAwesomeIcon icon={faMobilePhone} />
             <p className="text-xs md:text-base">
-              Transparansi, Kontrol, dan Kepercayaan orang tua
+              Menciptakan Ekosistem Cashless di Lingkungan Sekolah
             </p>
           </div>
           <div className="flex gap-5 mt-5">
