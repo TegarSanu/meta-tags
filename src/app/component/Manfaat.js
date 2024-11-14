@@ -22,8 +22,8 @@ const FlyerManfaat = () => {
           {configdata.companyName}
         </p>
         <p className="text-gray-500 mt-4 text-xs md:text-base">
-          Bersiaplah untuk transisi yang mulus menuju masa depan <br />{" "}
-          pendidikan yang lebih canggih, lebih cerdas, dan lebih terkoneksi!
+          Bersiaplah Untuk Transisi Yang Mulus Menuju Masa Depan <br />{" "}
+          Pendidikan Yang Lebih Canggih, Lebih Cerdas, Dan Lebih Terkoneksi!
         </p>
       </div>
       <div className="w-full flex gap-5 mt-10 md:flex-row flex-col">

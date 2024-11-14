@@ -7,6 +7,7 @@ import instagram from "@/images/socialmedia/instagram.svg";
 import linkedin from "@/images/socialmedia/linkedin.svg";
 import { motion } from "framer-motion";
 import { Tooltip } from "@nextui-org/react";
+import { configdata } from "@/config/global";
 
 const Footer = () => {
   const socialMedia = [
@@ -29,8 +30,8 @@ const Footer = () => {
   return (
     <div className="w-full bg-gray-800 mt-32">
       <div className="container w-full max-w-6xl flex flex-col mx-auto justify-center items-center pt-20 pb-10 text-sm px-7">
-        <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="w-full flex items-center md:items-start justify-center flex-col">
+        <div className="w-full  gap-4">
+          <div className="w-full flex items-center  justify-center flex-col">
             <motion.img
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 1 }}
@@ -40,7 +41,7 @@ const Footer = () => {
                 delay: 0.2,
               }}
               alt=""
-              src={logo.src}
+              src={configdata.logo.src}
               className="w-32"
             />
             <motion.p
@@ -56,7 +57,7 @@ const Footer = () => {
               Yuk, mulai petualangan digitalmu sekarang!
             </motion.p>
           </div>
-          <div className="text-gray-200 w-full flex items-center md:justify-normal justify-center flex-col text-center">
+          {/* <div className="text-gray-200 w-full flex items-center md:justify-normal justify-center flex-col text-center">
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 1 }}
@@ -158,11 +159,11 @@ const Footer = () => {
                 })}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="mt-20 w-full border-t-1 flex items-center justify-center container">
           <p className="text-gray-400 mt-4">
-            Teknologi Kartu Indonesia 2024. All Rights Reserved
+            {configdata.companyName} 2024. All Rights Reserved
           </p>
         </div>
       </div>

@@ -22,7 +22,7 @@ const FlyerHero = () => {
         <p className="text-gray-500 text-center md:text-medium text-xs">
           Selamatkan Waktu, Hemat Energi, Tingkatkan Efisiensi,
           <br />
-          Teknologi Inovatif untuk Operasional Sekolah yang lebih mudah
+          Teknologi Inovatif Untuk Operasional Sekolah Yang Lebih Mudah
         </p>
         <div className="w-full pt-5 md:pt-16 flex items-center justify-center gap-5">
           <div className="bg-black rounded-xl py-2 px-4 border-white border-1 text-white flex items-center gap-3">
