@@ -16,8 +16,8 @@ const FlyerHero = () => {
     <section id="home" className="w-full bg-white">
       <div className="w-full bg-gradient-to-t from-gray-50 to-white flex items-center pt-52 flex-col gap-5 px-7 md:px-0">
         <p className="text-2xl md:text-5xl text-center text-black font-bold max-w-4xl">
-          Saatnya GoDigital bersama {configdata.companyName}, Jadikan sekolah
-          lebih maju dengan teknologi
+          Saatnya GoDigital Bersama {configdata.companyName}, Jadikan Sekolah
+          Lebih Maju Dengan Teknologi
         </p>
         <p className="text-gray-500 text-center md:text-medium text-xs">
           Selamatkan Waktu, Hemat Energi, Tingkatkan Efisiensi,
