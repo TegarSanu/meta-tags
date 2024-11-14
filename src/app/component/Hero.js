@@ -5,15 +5,21 @@ import React, { useEffect, useState } from "react";
 import axios from "@/config/api";
 import bgGlowing from "@/images/background/bg-glowing-flyer.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faVideo } from "@fortawesome/free-solid-svg-icons";
 import { HeroImage } from "./CustomColorImage";
 import { configdata } from "@/config/global";
 
 const FlyerHero = () => {
-  const param = useParams();
+  const [open, setOpen] = useState(false);
+  const [link, setLink] = useState("");
+
+  const handleClick = (open, link) => {
+    setOpen(open);
+    setLink(link);
+  };
 
   return (
-    <section id="home" className="w-full bg-white">
+    <section id="home" className="w-full bg-white flex flex-col items-center">
       <div className="w-full bg-gradient-to-t from-gray-50 to-white flex items-center pt-52 flex-col gap-5 px-7 md:px-0">
         <p className="text-2xl md:text-5xl text-center text-black font-bold max-w-4xl">
           Saatnya GoDigital Bersama {configdata.companyName}, Jadikan Sekolah
@@ -25,18 +31,22 @@ const FlyerHero = () => {
           Teknologi Inovatif Untuk Operasional Sekolah Yang Lebih Mudah
         </p>
         <div className="w-full pt-5 md:pt-16 flex items-center justify-center gap-5">
-          <div className="bg-black rounded-xl py-2 px-4 border-white border-1 text-white flex items-center gap-3">
-            <FontAwesomeIcon icon={faCircle} />
+          <div
+            onClick={() => handleClick(true, "")}
+            className="cursor-pointer hover:scale-105 transition-all duration-300 bg-black rounded-xl py-2 px-4 border-white border-1 text-white flex items-center gap-3"
+          >
+            <FontAwesomeIcon icon={faVideo} />
             <div>
-              <p className="text-[10px] md:text-xs">Download on the</p>
-              <p className="text-sm md:text-xl font-bold">Apps Store</p>
+              <p className="text-sm md:text-lg ">{configdata.companyName}</p>
             </div>
           </div>
-          <div className="bg-black rounded-xl py-2 px-4 border-white border-1 text-white flex items-center gap-3">
-            <FontAwesomeIcon icon={faCircle} />
+          <div
+            onClick={() => handleClick(true, "haF8dzews1k")}
+            className="cursor-pointer hover:scale-105 transition-all duration-300 bg-black rounded-xl py-2 px-4 border-white border-1 text-white flex items-center gap-3"
+          >
+            <FontAwesomeIcon icon={faVideo} />
             <div>
-              <p className="text-[10px] md:text-xs">GET IT ON</p>
-              <p className="text-sm md:text-xl font-bold">Google Play</p>
+              <p className="text-sm md:text-lg ">Apa Kata Mereka?</p>
             </div>
           </div>
         </div>
@@ -81,6 +91,32 @@ const FlyerHero = () => {
                 className="w-full h-full rounded-t-xl bg-cover"
               ></div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={{ visibility: open ? "" : "hidden" }}
+        className="h-screen w-full bg-black fixed top-0 bottom-0 z-[500] bg-opacity-40 transition-all flex items-center justify-center px-5"
+      >
+        <div
+          className={`relative md:w-[50rem] h-auto w-full bg-red rounded-xl md:rounded-lg bg-white transition-all duration-300 z-[1000] p-4 ${
+            open ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <iframe
+            width="100%"
+            height="400"
+            src={`https://www.youtube.com/embed/${link}`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+          <div className="w-full flex justify-end mt-5">
+            <button
+              onClick={() => setOpen(false)}
+              className="py-2 px-8 rounded-lg bg-rose-500 text-white text-md"
+            >
+              Tutup
+            </button>
           </div>
         </div>
       </div>
