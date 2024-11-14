@@ -14,22 +14,25 @@ const materi = [
     type: "Materi",
     name: `${configdata.companyName.replaceAll("School", "")} School`,
     url: "",
-    materi: "/1-Sekolah Negeri-BNI-2024.pdf",
-    materi2: "/1-Sekolah-BNI-2024.pdf",
+    materi:
+      "https://www.canva.com/design/DAF9m9y5ymI/Ml6ErBopq4JNPAQ9FnB-9A/view",
+    // materi2: "/1-Sekolah-BNI-2024.pdf",
   },
   {
     title: `${configdata.companyName.replaceAll("School", "")} University`,
     type: "Materi",
     name: `${configdata.companyName.replaceAll("School", "")} University`,
     url: "https://app.stg.solusinegeri.com/UNTIRTA/autologin/001/1234",
-    materi: "/2-Universitas-BNI-2024.pdf",
+    materi:
+      "https://www.canva.com/design/DAF9mzUpS_E/EPgcYWSdFuhA0oF-8gStxQ/view",
   },
   {
     title: `${configdata.companyName.replaceAll("School", "")} Company`,
     type: "Materi",
     name: `${configdata.companyName.replaceAll("School", "")} Company`,
     url: "https://app.stg.solusinegeri.com/HKR/autologin/hkrdummy/1234",
-    materi: "/3-Perusahaan-BNI-2024.pdf",
+    materi:
+      "https://www.canva.com/design/DAF9m7R4wpQ/Rc2mlzzxjfcy11dNe2tE2g/view",
   },
   {
     title: `${configdata.companyName.replaceAll(
@@ -42,7 +45,8 @@ const materi = [
       ""
     )} General Membership`,
     url: "https://app.stg.solusinegeri.com/HSI/autologin/dummyhsi/1234",
-    materi: "/5-Membership-BNI-2024.pdf",
+    materi:
+      "https://www.canva.com/design/DAF9m8M3veE/jM8QOUONdm_mb2f6X48HLA/view",
   },
 ];
 
@@ -90,14 +94,14 @@ const FlyerProduct = () => {
                     <p
                       style={{ color: configdata.color1 }}
                       className="mt-5 cursor-pointer text-xs transition-all duration-300 hover:opacity-60 flex gap-2 items-center"
-                      onClick={() => window.open(res.materi, "_blank")}
+                      onClick={() => window.open(res.materi)}
                     >
-                      {res.materi2 && (
+                      {/* {res.materi2 && (
                         <FontAwesomeIcon icon={faCircle} width={5} />
-                      )}{" "}
+                      )}{" "} */}
                       Continue reading <FontAwesomeIcon icon={faAngleRight} />
                     </p>
-                    {res.materi2 && (
+                    {/* {res.materi2 && (
                       <p
                         style={{ color: configdata.color1 }}
                         className="mt-1 cursor-pointer text-xs transition-all duration-300 hover:opacity-60 flex gap-2 items-center"
@@ -106,7 +110,7 @@ const FlyerProduct = () => {
                         <FontAwesomeIcon icon={faCircle} width={5} /> Continue
                         reading <FontAwesomeIcon icon={faAngleRight} />
                       </p>
-                    )}
+                    )} */}
                   </div>
                   <button
                     onClick={() => window.open(res.url)}
