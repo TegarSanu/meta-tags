@@ -99,7 +99,7 @@ const FlyerProduct = () => {
                       {/* {res.materi2 && (
                         <FontAwesomeIcon icon={faCircle} width={5} />
                       )}{" "} */}
-                      Continue reading <FontAwesomeIcon icon={faAngleRight} />
+                      Materi Presentasi <FontAwesomeIcon icon={faAngleRight} />
                     </p>
                     {/* {res.materi2 && (
                       <p
