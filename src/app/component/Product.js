@@ -128,10 +128,11 @@ const FlyerProduct = () => {
       >
         <div className="text-white p-5 md:p-10">
           <p className="text-2xl md:text-4xl font-bold">
-            Get Started with Your Smart Apps Journey!
+            Siap Menyambut Era Baru Pendidikan ?
           </p>
           <p className="text-xs md:text-base mt-4">
-            Discover the Latest Smart Home Innovations
+            Bergabunglah Sekarang dan Nikmati Kemudahan Akses Informasi serta
+            Manajemen Sekolah yang Lebih Baik.
           </p>
           <div className="flex gap-5 mt-16">
             <div className="bg-black rounded-xl py-2 px-4 border-white border-1 text-white flex items-center gap-3">
