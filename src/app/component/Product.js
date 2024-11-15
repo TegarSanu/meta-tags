@@ -138,7 +138,7 @@ const FlyerProduct = () => {
             Bergabunglah Sekarang dan Nikmati Kemudahan Akses Informasi serta
             Manajemen Sekolah yang Lebih Baik.
           </p>
-          <div className="flex gap-5 mt-16">
+          {/* <div className="flex gap-5 mt-16">
             <div className="bg-black rounded-xl py-2 px-4 border-white border-1 text-white flex items-center gap-3">
               <FontAwesomeIcon icon={faCircle} />
               <div>
@@ -153,7 +153,7 @@ const FlyerProduct = () => {
                 <p className="text-sm md:text-xl font-bold">Google Play</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="relative">
           <div className="w-full flex items-baseline justify-center gap-[-10px] h-[300px] md:h-[450px]">
